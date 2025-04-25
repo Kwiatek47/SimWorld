@@ -11,7 +11,6 @@ void BarszczSosnowskiego::akcja() {
         {1, 1}, {-1, 1}, {-1, -1}, {1, -1} 
     };
     
-    bool zabitoKogos = false;
     for (const auto& [dx, dy] : kierunki) {
         int nx = x + dx;
         int ny = y + dy;
@@ -25,18 +24,12 @@ void BarszczSosnowskiego::akcja() {
             Zwierze* zwierze = dynamic_cast<Zwierze*>(organizm);
             if (zwierze) {
                 zwierze->setMartwy(true);
-                zabitoKogos = true;
                 
                 std::string komunikat = "Barszcz Sosnowskiego zabił " + zwierze->getIkona() + 
                                        " na pozycji (" + std::to_string(nx) + "," + std::to_string(ny) + ")";
                 swiatRef->dodajKomunikat(komunikat);
             }
         }
-    }
-    
-    if (zabitoKogos) {
-        std::string komunikat = "Barszcz Sosnowskiego spowodował śmierć zwierząt w swoim sąsiedztwie!";
-        swiatRef->dodajKomunikat(komunikat);
     }
 }
 

@@ -1,7 +1,7 @@
 COMPILER = g++
-COMPILER_FLAGS = -std=c++17 -Wall -Wextra -g  # Dodano -g dla debugowania
+COMPILER_FLAGS = -std=c++17 -Wall -Wextra -g  
 SRC = $(wildcard *.cpp) $(wildcard Zwierzeta/*.cpp) $(wildcard Rosliny/*.cpp)
-TARGET = main  # Poprawiono: spójność z `clean`
+TARGET = main 
 
 all: $(TARGET)
 

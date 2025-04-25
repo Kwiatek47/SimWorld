@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <deque>
+#include <fstream>
 
 class Organizm;
 class Czlowiek; 
@@ -16,6 +17,7 @@ private:
         std::vector<std::unique_ptr<Organizm>> organizmy;
         std::deque<std::string> historia;  
         const size_t max_historia_size = 15;
+        const std::string save_filename = "save_game.txt";
 
         std::pair<int, int> znajdzLosowaPozycje();
 
@@ -38,6 +40,7 @@ public:
 
         int getWidth() { return width; }
         int getHeight() { return height; } 
+        int getTura() { return tura; }
 
         void usunMartweOrganizmy();
 
@@ -52,4 +55,7 @@ public:
         void wyswietlHistorie();
 
         Czlowiek* znajdzCzlowieka();
+        
+        bool zapiszStanGry();
+        bool wczytajStanGry();
 };

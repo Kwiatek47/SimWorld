@@ -32,8 +32,8 @@ public:
         virtual void akcja() = 0;
         virtual void kolizja(Organizm* organizmNanowejPozycji);
 
-        virtual bool czyOdbilAtak([[maybe_unused]] Organizm* atakujacy) { return false; }
-        virtual bool czyUciekl([[maybe_unused]] Organizm* atakujacy) { return false; }
+        virtual bool czyOdbilAtak( Organizm* atakujacy) { return false; }
+        virtual bool czyUciekl(Organizm* atakujacy) { return false; }
         
         void rysuj();
 

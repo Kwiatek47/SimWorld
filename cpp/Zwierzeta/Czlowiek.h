@@ -32,6 +32,9 @@ public:
     int pozostaleTuryTarczy() const { return licznikTarczy; }
     int pozostaleTuryCooldownu() const { return cooldownTarczy; }
     
+    void setLicznikTarczy(int licznik) { licznikTarczy = licznik; }
+    void setCooldownTarczy(int cooldown) { cooldownTarczy = cooldown; }
+
     std::unique_ptr<Organizm> kopiuj(int x, int y) override {
         return std::make_unique<Czlowiek>(x, y, 0);
     }
