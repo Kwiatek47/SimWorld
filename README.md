@@ -39,4 +39,4 @@ Po skompilowaniu, uruchom program:
 
 Program poprowadzi Cię przez proces konfiguracji symulacji, prosząc o podanie wymiarów mapy.
 ---
-Projekt stworzony jako część ćwiczeń z programowania obiektowego w C++. 
+Projekt stworzony jako część ćwiczeń z programowania obiektowego w C++
